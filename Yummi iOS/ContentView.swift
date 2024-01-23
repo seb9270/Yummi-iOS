@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let ingredients= ingredients(name: "Onion")
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, Seb!")
+            Text(ingredients)
         }
         .padding()
     }
@@ -21,4 +24,8 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+    }
+    
+struct ingredients {
+    var name: String
 }
