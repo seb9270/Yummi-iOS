@@ -8,24 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    let ingredient = ingredients(name: "Onion", quantity: 35, unit: "units", category: "Vegetables", expiryDate: "30th March 2024")
     
-    let ingredients= ingredients(name: "Onion")
+    func displayIngredient() -> String{
+        return """
+Name: \(ingredient.name)
+Quantity: \(ingredient.quantity) \(ingredient.unit)
+Category: \(ingredient.category)
+Expiry date: \(ingredient.expiryDate)
+"""
+    }
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text(ingredients)
+            //Text(displayIngredient())
+            //Text()
         }
-        .padding()
+
     }
 }
 
 #Preview {
     ContentView()
-    }
-    
-struct ingredients {
-    var name: String
 }
+

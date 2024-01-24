@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct ingredients {
+    let name: String
+    var quantity: Int
+    var unit: String
+    var category: String
+    let expiryDate: String
+}
