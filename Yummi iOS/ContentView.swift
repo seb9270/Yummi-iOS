@@ -6,23 +6,39 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct ContentView: View {
-    let ingredient = ingredients(name: "Onion", quantity: 35, unit: "units", category: "Vegetables", expiryDate: "30th March 2024")
+    @State private var possibleIngredients = possibleIngredients()
     
-    func displayIngredient() -> String{
+    
+    func displayIngredient() -> String {
+        var ingredient = possibleIngredients.ingredientlist[0]
+        var cat = ""
+        if ingredient.category == Category.vegetable {
+            cat = "Vegetable"
+        }
+        else if ingredient.category == Category.fruit {
+            cat = "fruit"
+        }
+        else if ingredient.category == Category.meat {
+            cat = "meat"
+        }
+        else if ingredient.category == Category.other {
+            cat = "other"
+        }
+        
         return """
 Name: \(ingredient.name)
 Quantity: \(ingredient.quantity) \(ingredient.unit)
-Category: \(ingredient.category)
+Category: \(cat)
 Expiry date: \(ingredient.expiryDate)
 """
     }
     
     var body: some View {
         VStack {
-            //Text(displayIngredient())
-            //Text()
+            Text(displayIngredient())
         }
 
     }
