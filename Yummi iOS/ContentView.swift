@@ -9,38 +9,35 @@ import SwiftUI
 import Foundation
 
 struct ContentView: View {
-    @State private var possibleIngredients = possibleIngredients()
+    @State private var possibleIngredients = PossibleIngredients()
+    @State private var selectedIngredient: Int = 2
+    @State private var newIngredient: String = ""
+    @State private var cycle: Int = 0
     
-    
-    func displayIngredient() -> String {
-        var ingredient = possibleIngredients.ingredientlist[0]
-        var cat = ""
-        if ingredient.category == Category.vegetable {
-            cat = "Vegetable"
-        }
-        else if ingredient.category == Category.fruit {
-            cat = "fruit"
-        }
-        else if ingredient.category == Category.meat {
-            cat = "meat"
-        }
-        else if ingredient.category == Category.other {
-            cat = "other"
-        }
-        
-        return """
-Name: \(ingredient.name)
-Quantity: \(ingredient.quantity) \(ingredient.unit)
-Category: \(cat)
-Expiry date: \(ingredient.expiryDate)
-"""
-    }
     
     var body: some View {
-        VStack {
-            Text(displayIngredient())
+        Form {
+            VStack {
+                Text(possibleIngredients.ingredientList[selectedIngredient].displayIngredient())
+                Button("Next Ingredient", action: {
+                    if selectedIngredient < self.possibleIngredients.ingredientList.count - 1 {
+                        selectedIngredient += 1
+                    }
+                    else {
+                        selectedIngredient = 0
+                    }
+                })
+            }
+            Section {
+                if cycle == 0 {
+                    TextField("Enter name:", text: $newIngredient)
+                        //cycle += 1
+                }
+                else if cycle == 1 {
+                    
+                }
+            }
         }
-
     }
 }
 
