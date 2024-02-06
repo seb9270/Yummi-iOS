@@ -9,7 +9,8 @@ import SwiftUI
 import Foundation
 
 struct ContentView: View {
-    @State private var possibleIngredients = PossibleIngredients()
+    //@State private var possibleIngredients = PossibleIngredients()
+    @State var ingredients = ingredient.examples
     @State private var selectedIngredient: Int = 2
     @State private var cycle: Int = 0
     @State private var newName = ""
@@ -25,9 +26,9 @@ struct ContentView: View {
     var body: some View {
         Form {
             VStack {
-                Text(possibleIngredients.ingredientList[selectedIngredient].displayIngredient())
+                Text(ingredients[selectedIngredient].ingredientDisplayed)
                 Button("Next Ingredient", action: {
-                    if selectedIngredient < self.possibleIngredients.ingredientList.count - 1 {
+                    if selectedIngredient < ingredients.count - 1 {
                         selectedIngredient += 1
                     }
                     else {
@@ -62,7 +63,11 @@ struct ContentView: View {
                         cycle = 0
                         newQuantityInt = Int(newQuantityString) ?? 0
                         var newIngredient = ingredient(name: newName, quantity: newQuantityInt, unit: newUnit, category: newCategory, expiryDate: newExpiryDate)
-                        //PossibleIngredients.ingredientList.append(newIngredient)
+                        ingredients.append(newIngredient)
+                        newName = ""
+                        newQuantityString = ""
+                        newUnit = ""
+                        newExpiryDate = ""
                     }
                 })
             }
