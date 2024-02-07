@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A18424B2B6178690096CFD4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A18424A2B6178690096CFD4 /* Models.swift */; };
+		5A8009C32B73EBC0003563BE /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8009C22B73EBC0003563BE /* RecipesView.swift */; };
 		5AFA96812B5FF14800FA372B /* Yummi_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFA96802B5FF14800FA372B /* Yummi_iOSApp.swift */; };
 		5AFA96832B5FF14800FA372B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFA96822B5FF14800FA372B /* ContentView.swift */; };
 		5AFA96852B5FF14A00FA372B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFA96842B5FF14A00FA372B /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		5A18424A2B6178690096CFD4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		5A8009C22B73EBC0003563BE /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		5AFA967D2B5FF14800FA372B /* Yummi iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yummi iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFA96802B5FF14800FA372B /* Yummi_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yummi_iOSApp.swift; sourceTree = "<group>"; };
 		5AFA96822B5FF14800FA372B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				5AFA96802B5FF14800FA372B /* Yummi_iOSApp.swift */,
 				5AFA96822B5FF14800FA372B /* ContentView.swift */,
+				5A8009C22B73EBC0003563BE /* RecipesView.swift */,
 				5AFA96842B5FF14A00FA372B /* Assets.xcassets */,
 				5AFA96862B5FF14A00FA372B /* Preview Content */,
 				5A18424A2B6178690096CFD4 /* Models.swift */,
@@ -262,6 +265,7 @@
 			files = (
 				5A18424B2B6178690096CFD4 /* Models.swift in Sources */,
 				5AFA96832B5FF14800FA372B /* ContentView.swift in Sources */,
+				5A8009C32B73EBC0003563BE /* RecipesView.swift in Sources */,
 				5AFA96812B5FF14800FA372B /* Yummi_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

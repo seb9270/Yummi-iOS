@@ -9,9 +9,8 @@ import SwiftUI
 import Foundation
 
 struct ContentView: View {
-    //@State private var possibleIngredients = PossibleIngredients()
-    @State var ingredients = ingredient.examples
-    @State private var selectedIngredient: Int = 2
+    @State var ingredients = Ingredient.examples
+    @State private var selectedIngredient: Int = 0
     @State private var cycle: Int = 0
     @State private var newName = ""
     @State private var newQuantityString = ""
@@ -62,7 +61,7 @@ struct ContentView: View {
                     else {
                         cycle = 0
                         newQuantityInt = Int(newQuantityString) ?? 0
-                        var newIngredient = ingredient(name: newName, quantity: newQuantityInt, unit: newUnit, category: newCategory, expiryDate: newExpiryDate)
+                        var newIngredient = Ingredient(name: newName, quantity: newQuantityInt, unit: newUnit, category: newCategory, expiryDate: newExpiryDate)
                         ingredients.append(newIngredient)
                         newName = ""
                         newQuantityString = ""
