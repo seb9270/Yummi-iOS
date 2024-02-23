@@ -13,9 +13,26 @@ struct RecipesView: View {
     
     
     var body: some View {
-        VStack {
+        List {
             ForEach(exampleRecipes) { recipe in
-                Text(recipe.name)
+                HStack {
+                    //Text(recipe.name)
+                    VStack(alignment: .leading) {
+                        Text(recipe.name)
+                        Text(recipe.ingredients[0].name)
+                        
+                        //ForEach(recipe.ingredients, id: \.name) in {
+                            
+                        //}
+                        
+                        
+                    }.background(Color.red)
+                    Spacer()
+                    Image(recipe.image)
+                        .resizable()
+                        .frame(width: 110.0, height: 110.0)
+                    
+                }
             }
         }
     }

@@ -41,11 +41,13 @@ struct Recipes: Identifiable {
     let name: String
     let ingredients: [Ingredient]
     let isFavourite: Bool
+    let image: String
     let rating: Int
     
     //#if DEBUG
-    static var exampleRecipes = [Recipes(name: "Banana Split", ingredients: [Ingredient(name: "Banana", quantity: 2, unit: "bananas", category: Category.fruit, expiryDate: "N/A"), Ingredient(name: "Ice Cream", quantity: 2, unit: "scoops", category: Category.other, expiryDate: "N/A")], isFavourite: true, rating: 8),
-                                 Recipes(name: "Steak", ingredients: [Ingredient(name: "Beef", quantity: 20, unit: "pounds", category: Category.meat, expiryDate: "N/A")], isFavourite: false, rating: 10)]
+    static var exampleRecipes = [Recipes(name: "Banana Split", ingredients: [Ingredient(name: "Banana", quantity: 2, unit: "bananas", category: Category.fruit, expiryDate: "N/A"), Ingredient(name: "Vanilla Ice Cream", quantity: 2, unit: "scoops", category: Category.other, expiryDate: "N/A")], isFavourite: true, image: "BananaSplit", rating: 8),
+                                 Recipes(name: "Steak", ingredients: [Ingredient(name: "Beef", quantity: 20, unit: "pounds", category: Category.meat, expiryDate: "N/A")], isFavourite: false, image: "Steak", rating: 10),
+                                 Recipes(name: "Oreo Milkshake", ingredients: [Ingredient(name: "Vanilla Ice Cream", quantity: 3, unit: "scoops", category: Category.other, expiryDate: "N/A"), Ingredient(name: "Oreo", quantity: 3, unit: "oreos", category: Category.other, expiryDate: "N/A")], isFavourite: false, image: "OreoMilkshake", rating: 7)]
     //#endif
     
     
