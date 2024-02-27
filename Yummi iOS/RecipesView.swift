@@ -16,17 +16,25 @@ struct RecipesView: View {
         List {
             ForEach(exampleRecipes) { recipe in
                 HStack {
-                    //Text(recipe.name)
                     VStack(alignment: .leading) {
-                        Text(recipe.name)
-                        Text(recipe.ingredients[0].name)
+                        Text("\(recipe.name)")
+                            .bold()
                         
-                        //ForEach(recipe.ingredients, id: \.name) in {
-                            
-                        //}
+                        Spacer()
+                        
+                        Text("\(recipe.rating)/10")
+                        
+                        Spacer()
+                        
+                        ForEach(recipe.ingredients) { ingredient in
+                            Text("\(ingredient.name)")
+                                .italic()
+                        }
                         
                         
-                    }.background(Color.red)
+                        
+                        
+                    }//.background(Color.red)
                     Spacer()
                     Image(recipe.image)
                         .resizable()
