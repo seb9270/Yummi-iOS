@@ -9,8 +9,7 @@ import SwiftUI
 
 
 struct RecipesView: View {
-    @State var exampleRecipes = Recipes.exampleRecipes
-    
+    @State var exampleRecipes = Recipes.exampleRecipes.sorted(by: { $0.rating > $1.rating})
     
     var body: some View {
         List {
@@ -22,7 +21,12 @@ struct RecipesView: View {
                         
                         Spacer()
                         
-                        Text("\(recipe.rating)/10")
+                        Text("serves \(recipe.servings) people")
+                        
+                        Spacer()
+                        
+                        Image(systemName: "\(recipe.rating).circle")
+                            .font(.title2)
                         
                         Spacer()
                         

@@ -30,9 +30,9 @@ Expiry date: \(expiryDate)
 """
 }
     
-    static var examples = [Ingredient(name: "Mango", quantity: 3, unit: "mangoes", category: Category.fruit, expiryDate: "27 November 2024"),
-                           Ingredient(name: "Onion", quantity: 35, unit: "units", category: Category.vegetable, expiryDate: "30th March 2024"),
-                           Ingredient(name: "Steak", quantity: 10, unit: "Kgs", category: Category.meat, expiryDate: "31st July 2025")]
+    static var examples = [Ingredient(name: "Mango", quantity: 3, unit: "mangoes", category: Category.fruit, expiryDate: "3/5/97"),
+                           Ingredient(name: "Onion", quantity: 35, unit: "units", category: Category.vegetable, expiryDate: "7/12/24"),
+                           Ingredient(name: "Steak", quantity: 10, unit: "Kgs", category: Category.meat, expiryDate: "5/23/24")]
 }
 
 
@@ -43,11 +43,13 @@ struct Recipes: Identifiable {
     let isFavourite: Bool
     let image: String
     let rating: Int
+    let servings: Int
+    
     
     //#if DEBUG
-    static var exampleRecipes = [Recipes(name: "Banana Split", ingredients: [Ingredient(name: "Banana", quantity: 2, unit: "bananas", category: Category.fruit, expiryDate: "N/A"), Ingredient(name: "Vanilla Ice Cream", quantity: 2, unit: "scoops", category: Category.other, expiryDate: "N/A")], isFavourite: true, image: "BananaSplit", rating: 8),
-                                 Recipes(name: "Steak", ingredients: [Ingredient(name: "Beef", quantity: 20, unit: "pounds", category: Category.meat, expiryDate: "N/A")], isFavourite: false, image: "Steak", rating: 10),
-                                 Recipes(name: "Oreo Milkshake", ingredients: [Ingredient(name: "Vanilla Ice Cream", quantity: 3, unit: "scoops", category: Category.other, expiryDate: "N/A"), Ingredient(name: "Oreo", quantity: 3, unit: "oreos", category: Category.other, expiryDate: "N/A")], isFavourite: false, image: "OreoMilkshake", rating: 7)]
+    static var exampleRecipes = [Recipes(name: "Banana Split", ingredients: [Ingredient(name: "Banana", quantity: 2, unit: "bananas", category: Category.fruit, expiryDate: "N/A"), Ingredient(name: "Vanilla Ice Cream", quantity: 2, unit: "scoops", category: Category.other, expiryDate: "N/A")], isFavourite: true, image: "BananaSplit", rating: 8, servings: 2),
+                                 Recipes(name: "Steak", ingredients: [Ingredient(name: "Beef", quantity: 20, unit: "pounds", category: Category.meat, expiryDate: "N/A")], isFavourite: false, image: "Steak", rating: 10, servings: 4),
+                                 Recipes(name: "Oreo Milkshake", ingredients: [Ingredient(name: "Vanilla Ice Cream", quantity: 3, unit: "scoops", category: Category.other, expiryDate: "N/A"), Ingredient(name: "Oreo", quantity: 3, unit: "oreos", category: Category.other, expiryDate: "N/A")], isFavourite: false, image: "OreoMilkshake", rating: 7, servings: 1)]
     //#endif
     
     
